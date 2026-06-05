@@ -101,6 +101,15 @@ const banner = document.createElement ("tip-container");
 banner.classList.add("tip-card");
 banner.textContent = "Boek je vlucht op disndag of woensdag voor de beste prijzen.";
 document.getElementById("tip-container").appendChild(banner); 
+
+// Feature 5
+const transportOptions = 
+  document.getElementById("transport-badges");
+for (let i = 0; transportOptions.length; i++) {
+  const li = document.createElement ("li");
+  li.textContent = transportOptions[i];
+  transportOptions.appendChild(li); 
+}
 }
 
   
