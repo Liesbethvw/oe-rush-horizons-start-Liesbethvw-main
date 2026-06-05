@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horizons — Reisplatform</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Chivo:wght@300;400;500&family=Chivo+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <script src="assets/js/script.js"></script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__logo">Horizons<span>.</span></div>
+    <ul class="nav__links">
+      <li><a href="#destinations">Bestemmingen</a></li>
+      <li><a href="#flight">Vlucht</a></li>
+      <li><a href="#guides">Reisgidsen</a></li>
+      <li><a href="#book">Boeken</a></li>
+    </ul>
+    <div class="nav__right">
+      <!-- Feature 8b - light/dark mode -->
+      <button id="theme-toggle" class="btn-icon" title="Wissel thema">◐</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero__content">
+      <div class="hero__eyebrow">Welkom terug, <strong>Lucas Vermeersch</strong></div>
+      <h1 class="hero__title">Jouw volgende<br/><em>avontuur</em><br/>wacht.</h1>
+
+      <div class="hero__miles-card">
+        <span class="miles-label">Jouw reispunten</span>
+        <!-- FEATURE 1 — reispunten worden hier getoond -->
+        <span id="miles-display" class="miles-value">—</span>
+        <span class="miles-unit">miles</span>
+      </div>
+    </div>
+
+    <div class="hero__sidebar">
+
+      <!-- FEATURE 7 — vluchtinfo uit object -->
+      <div class="flight-card">
+        <div class="flight-card__header">
+          <span class="flight-card__label">Volgende vlucht</span>
+          <span id="flight-number" class="flight-card__number">—</span>
+        </div>
+        <div class="flight-card__route">
+          <div class="flight-card__city">
+            <span class="flight-card__code" id="flight-from">—</span>
+            <span class="flight-card__name" id="flight-from-name">—</span>
+          </div>
+          <div class="flight-card__arrow">✈</div>
+          <div class="flight-card__city flight-card__city--right">
+            <span class="flight-card__code" id="flight-to">—</span>
+            <span class="flight-card__name" id="flight-to-name">—</span>
+          </div>
+        </div>
+        <div class="flight-card__meta">
+          <div>
+            <span class="flight-card__meta-label">Datum</span>
+            <span id="flight-date" class="flight-card__meta-value">—</span>
+          </div>
+          <div>
+            <span class="flight-card__meta-label">Gate</span>
+            <span id="flight-gate" class="flight-card__meta-value">—</span>
+          </div>
+          <!-- FEATURE 2 — beschikbaarheidsstatus -->
+          <div>
+            <span class="flight-card__meta-label">Status</span>
+            <span id="flight-status" class="flight-card__meta-value">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE 3 — reiskostenberekening -->
+      <div class="cost-card">
+        <span class="cost-card__label">Geschatte reiskosten</span>
+        <span id="cost-display" class="cost-card__value">—</span>
+        <span class="cost-card__sub">voor <strong id="cost-persons">—</strong> personen</span>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="tip-section" id="tip">
+    <div class="tip-section__inner">
+      <span class="tip-section__label">Tip van de dag</span>
+      <!-- FEATURE 4 — kaartje wordt hier dynamisch ingevoegd -->
+      <div id="tip-container"></div>
+    </div>
+  </section>
+
+  <section class="section transport" id="transport">
+    <div class="section__header">
+      <span class="section__number">01</span>
+      <h2 class="section__title">Hoe wil je reizen?</h2>
+    </div>
+    <p class="transport__intro">Kies jouw vervoersmiddel voor de perfecte reis.</p>
+    <!-- FEATURE 5 — badges worden hier ingevoegd via een lus -->
+    <div id="transport-badges" class="transport__badges"></div>
+  </section>
+
+  <section class="section destinations" id="destinations">
+    <div class="section__header">
+      <span class="section__number">02</span>
+      <h2 class="section__title">Populaire bestemmingen</h2>
+    </div>
+
+    <!-- FEATURE 6 — statistieken uit array -->
+    <div class="dest-stats">
+      <div class="dest-stat">
+        <span id="dest-count" class="dest-stat__value">—</span>
+        <span class="dest-stat__label">Bestemmingen</span>
+      </div>
+      <div class="dest-stat">
+        <span id="dest-first" class="dest-stat__value">—</span>
+        <span class="dest-stat__label">Eerste bestemming</span>
+      </div>
+      <div class="dest-stat">
+        <span id="dest-last" class="dest-stat__value">—</span>
+        <span class="dest-stat__label">Nieuwste bestemming</span>
+      </div>
+    </div>
+
+    <!-- FEATURE 9 — bestemmingskaarten -->
+    <div id="destinations-grid" class="destinations-grid"></div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="section__header">
+      <span class="section__number">03</span>
+      <h2 class="section__title">Over Horizons</h2>
+    </div>
+    <div class="about__layout">
+      <div class="about__teaser">
+        <p class="about__tagline">Meer dan een reisplatform —<br/>een community van avonturiers.</p>
+        <button id="more-info-btn" class="btn-primary">Meer info →</button>
+      </div>
+      <!-- FEATURE 8b — verborgen tekst, wordt zichtbaar bij klik -->
+      <div id="more-info-text" class="about__text hidden">
+        <p>Horizons werd opgericht in 2015 door twee backpackers met een droom: reizen toegankelijk maken voor iedereen. Vandaag helpen we meer dan 200.000 reizigers per jaar aan hun perfecte trip — van weekendjes Parijs tot expedities in Patagonië.</p>
+        <p>Ons team van lokale reisgidsen staat 24/7 voor je klaar. We geloven niet in pakketreizen, maar in authenticiteit, avontuur en eerlijke prijzen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section guides" id="guides">
+    <div class="section__header">
+      <span class="section__number">04</span>
+      <h2 class="section__title">Onze reisgidsen</h2>
+    </div>
+    <!-- FEATURE 10 — gidsenkaarten via fetch -->
+    <div id="guides-grid" class="guides-grid">
+      <p class="loading-text">Reisgidsen laden...</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__brand">Horizons<span>.</span></div>
+    <div class="footer__copy">© 2025 Horizons NV. Alle rechten voorbehouden.</div>
+  </footer>
+  
+</body>
+</html>

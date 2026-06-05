@@ -1,0 +1,37 @@
+[
+  {
+    "name":       "Sara Declercq",
+    "initials":   "SD",
+    "speciality": "Azië & Verre Oosten",
+    "languages":  "NL, EN, JP",
+    "trips":      142
+  },
+  {
+    "name":       "Mehdi Amrani",
+    "initials":   "MA",
+    "speciality": "Noord-Afrika & Midden-Oosten",
+    "languages":  "NL, EN, FR, AR",
+    "trips":      98
+  },
+  {
+    "name":       "Ines Correia",
+    "initials":   "IC",
+    "speciality": "Zuid-Europa & Portugal",
+    "languages":  "NL, EN, PT, ES",
+    "trips":      211
+  },
+  {
+    "name":       "Bjorn Haugen",
+    "initials":   "BH",
+    "speciality": "Scandinavië & Poolgebied",
+    "languages":  "NL, EN, NO",
+    "trips":      77
+  },
+  {
+    "name":       "Camila Reyes",
+    "initials":   "CR",
+    "speciality": "Latijns-Amerika",
+    "languages":  "NL, EN, ES, PT",
+    "trips":      134
+  }
+]
