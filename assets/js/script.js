@@ -80,7 +80,6 @@ const trips = [
 ];
 
 // Feature 2
-
 // Feature 3
 
 
@@ -110,7 +109,16 @@ for (let i = 0; transportOptions.length; i++) {
   li.textContent = transportOptions[i];
   transportOptions.appendChild(li); 
 }
-}
 
-  
-    
+//Feature 6
+const destCount =
+  destinations [0];
+
+const destFirst =
+  destinations [0];
+
+const destLast=
+  destinations [0];
+
+
+}
