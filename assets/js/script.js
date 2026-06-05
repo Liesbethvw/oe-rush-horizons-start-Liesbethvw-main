@@ -79,9 +79,16 @@ const trips = [
   }
 ];
 
+// Feature 2
 function isFlightAvailable(seats) {
  return currentSeats > 1 && currentSeats <= i; 
 } 
+
+// Feature 3
+function calculateTravelCost (pricePerPerson, numberOfPersons) {
+  const currentPricePerPerson = new Price(). getFullPrice();
+  return currentPricePerPerson - pricePerPerson;
+}
 window.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
@@ -93,6 +100,9 @@ if (isFlightAvailable()) {
   document.getElementById("flight-status").innerHTML='Beschikbaar';
 } else {
   document.getElementById("flight-status").innerHTML='Volgeboekt'; 
+
+  // Feature 3 
+
 }
 }
 
