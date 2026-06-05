@@ -88,7 +88,11 @@ function isFlightAvailable(seats) {
 function calculateTravelCost (pricePerPerson, numberOfPersons) {
   const currentPricePerPerson = new Price(). getFullPrice();
   return currentPricePerPerson - pricePerPerson;
+
+  const currentNumberOfPersons = new Number(). getAllNumbers();
+  return currentNumberOfPersons - numberOfPersons; 
 }
+
 window.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
