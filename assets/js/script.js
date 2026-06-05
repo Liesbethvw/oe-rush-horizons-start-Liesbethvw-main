@@ -78,6 +78,7 @@ const trips = [
     image:   "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80"
   }
 ];
+ 
 
 window.addEventListener("DOMContentLoaded", initialize);
 
