@@ -169,13 +169,6 @@ gate.textContent = flight.gate;
   }); 
 
 // Feature 9 
-// De portfolio sectie heeft een lege <div id="portfolio-grid">.
-// In deze div dienen er (project)kaartjes getoond te worden met verschillend (portfolio)projecten van de agency. Deze (portfolio)projecten staan gedefinieërd in de array portfolioProjects.
-// Elke (portfolio)kaart, die bestaat een een <div> met klasse portfolio-card, moet het volgende bevatten:
-// Een <img> met de bijhorende (portfolio)afbeelding. Je vindt deze terug in de /assets/img map.
-// Een <div> met klasse portfolio-card__overlay. Deze div bevat op zijn beurt
-// Een <p> tag met klasse portfolio-card__title, waarin je de titel van het project weergeeft
-// Een <p> tag met klasse portfolio-card__category, waarin je de categorie van het project weergeeft.
 
 for (let i = 0; i < trips.length; i++) {
   const destinations = trips [i];
@@ -183,10 +176,10 @@ for (let i = 0; i < trips.length; i++) {
   card.classList.add ("dest-card");
 
   const image = document.createElement("img");
-  image.src= "assets/img/" + destinations.image;
+  image.src= "assets/img/" + trips.img; 
 
   const country = document.createElement("div"); 
-  country.classList.add(destinations-card__country)
+  country.classList.add("destinations-card__country"); 
 
   const body = document.createElement("div");
   body.classList.add("destination-card__body");
@@ -204,7 +197,7 @@ for (let i = 0; i < trips.length; i++) {
   footer.classList.add("destination-card__footer");
   footer.textContent = destinations.footer;
 
-  
+
 
 
 
