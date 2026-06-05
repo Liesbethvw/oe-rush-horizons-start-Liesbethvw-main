@@ -89,8 +89,12 @@ function initialize() {
   document.getElementById("miles-display").innerHTML = currentUser.miles;
 
   // Feature 2
+if (isFlightAvailable()) {
+  document.getElementById("flight-status").innerHTML='Beschikbaar';
+} else {
+  document.getElementById("flight-status").innerHTML='Volgeboekt'; 
+}
+}
 
   
-  
-   
-}
+    
