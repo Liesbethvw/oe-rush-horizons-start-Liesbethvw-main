@@ -121,9 +121,31 @@ const destLast=
   destinations [0];
 
 // Feature 7
-const from =
+const number =
 document.getElementById("flight-number");
-from.textContent = flight.number; 
+number.textContent = flight.number; 
 
-   
+const from =
+document.getElementById("flight-from");
+from.textContent = flight.from; 
+
+const fromCity =
+document.getElementById("flight-from-name");
+fromCity.textContent = flight.fromCity; 
+
+const to =
+document.getElementById("flight-to");
+to.textContent = flight.to; 
+
+const toCity =
+document.getElementById("flight-to-name");
+toCity.textContent = flight.toCity; 
+
+const date =
+document.getElementById("flight-date");
+date.textContent = flight.date;
+
+const gate =
+document.getElementById("flight-gate");
+gate.textContent = flight.gate;
 }
