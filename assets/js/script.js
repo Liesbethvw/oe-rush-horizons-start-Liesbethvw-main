@@ -120,5 +120,10 @@ const destFirst =
 const destLast=
   destinations [0];
 
+// Feature 7
+const from =
+document.getElementById("flight-number");
+from.textContent = flight.number; 
 
+   
 }
