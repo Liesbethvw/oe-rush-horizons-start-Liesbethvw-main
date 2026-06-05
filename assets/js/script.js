@@ -148,4 +148,25 @@ date.textContent = flight.date;
 const gate =
 document.getElementById("flight-gate");
 gate.textContent = flight.gate;
+
+// Feature 8
+  // DARK/LIGHT
+  const moreInfoButton =
+  document.getElementById("theme-toggle");
+  moreInfoButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+  }); 
+
+  //VERBORGEN TEKST
+  const moreInfoBtn=
+  document.getElementById("more-info-btn");
+
+  const text =
+  document.getElementById("more-info-text");
+
+  moreInfoButton.addEventListener("click", function (){
+    text.classList.remove("hidden"); 
+  }); 
+
+
 }
