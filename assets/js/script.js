@@ -80,18 +80,9 @@ const trips = [
 ];
 
 // Feature 2
-function isFlightAvailable(seats) {
- return currentSeats > 1 && currentSeats <= i; 
-} 
 
 // Feature 3
-function calculateTravelCost (pricePerPerson, numberOfPersons) {
-  const currentPricePerPerson = new Price(). getFullPrice();
-  return currentPricePerPerson - pricePerPerson;
 
-  const currentNumberOfPersons = new Number(). getAllNumbers();
-  return currentNumberOfPersons - numberOfPersons; 
-}
 
 window.addEventListener("DOMContentLoaded", initialize);
 
@@ -100,14 +91,16 @@ function initialize() {
   document.getElementById("miles-display").innerHTML = currentUser.miles;
 
   // Feature 2
-if (isFlightAvailable()) {
-  document.getElementById("flight-status").innerHTML='Beschikbaar';
-} else {
-  document.getElementById("flight-status").innerHTML='Volgeboekt'; 
+
 
   // Feature 3 
 
-}
+
+// Feature 4
+const banner = document.createElement ("tip-container");
+banner.classList.add("tip-card");
+banner.textContent = "Boek je vlucht op disndag of woensdag voor de beste prijzen.";
+document.getElementById("tip-container").appendChild(banner); 
 }
 
   
